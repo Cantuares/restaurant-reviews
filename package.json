@@ -1,0 +1,26 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "http-server": "python -m SimpleHTTPServer 8000 2>&1",
+    "gulp-dev": "gulp dev",
+    "serve": "concurrently --kill-others \"npm run http-server\" \"npm run gulp-dev\""
+  },
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-cli": "^2.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "concurrently": "^3.6.1",
+    "gulp-postcss": "^7.0.0"
+  }
+}

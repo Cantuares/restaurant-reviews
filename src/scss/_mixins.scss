@@ -1,0 +1,124 @@
+@mixin media-down($point) {
+  
+  $smallphone: "(max-width: 480px)";
+  $phone: "(max-width: 767px)";
+  $tablet: "(max-width: 991px)";
+  $desktop: "(max-width: 1199px)";
+
+  @if $point == smallphone {
+    @media #{$smallphone} { @content; }
+  }
+  @else if $point == phone {
+    @media #{$phone} { @content; }
+  }
+  @else if $point == tablet {
+    @media #{$tablet} { @content; }
+  }
+  @else if $point == desktop {
+    @media #{$desktop}  { @content; }
+  }
+  @else {
+    @media (max-width: #{$point}px) { @content; }
+  }
+
+}
+
+@mixin media-up($point) {
+  
+  $smallphone: "(min-width: 481px)";
+  $phone: "(min-width: 768px)";
+  $tablet: "(min-width: 992px)";
+  $desktop: "(min-width: 1200px)";
+
+  @if $point == smallphone {
+    @media #{$smallphone} { @content; }
+  }
+  @else if $point == phone {
+    @media #{$phone} { @content; }
+  }
+  @else if $point == tablet {
+    @media #{$tablet} { @content; }
+  }
+  @else if $point == desktop {
+    @media #{$desktop}  { @content; }
+  }
+  @else {
+    @media (min-width: #{$point}px) { @content; }
+  }
+
+}
+
+@mixin create-columns-xl-grid() {
+  .col {
+    @for $i from 12 through 1 {
+      &-xl-#{$i} {
+        $columns: 12;
+        $width: 1600;
+        padding: 0 15px;
+        float: left;
+        box-sizing: border-box;
+        width: (($width/$columns)*$i)/$width*100%;
+      }
+    }
+  }
+}
+
+@mixin create-columns-lg-grid() {
+  .col {
+    @for $i from 12 through 1 {
+      &-lg-#{$i} {
+        $columns: 12;
+        $width: 1199;
+        padding: 0 15px;
+        float: left;
+        box-sizing: border-box;
+        width: (($width/$columns)*$i)/$width*100%;
+      }
+    }
+  }
+}
+
+@mixin create-columns-md-grid() {
+  .col {
+    @for $i from 12 through 1 {
+      &-md-#{$i} {
+        $columns: 12;
+        $width: 991;
+        padding: 0 15px;
+        float: left;
+        box-sizing: border-box;
+        width: (($width/$columns)*$i)/$width*100%;
+      }
+    }
+  }
+}
+
+@mixin create-columns-sm-grid() {
+  .col {
+    @for $i from 12 through 1 {
+      &-sm-#{$i} {
+        $columns: 12;
+        $width: 768;
+        padding: 0 15px;
+        float: left;
+        box-sizing: border-box;
+        width: (($width/$columns)*$i)/$width*100%;
+      }
+    }
+  }
+}
+
+@mixin create-columns-xs-grid() {
+  .col {
+    @for $i from 12 through 1 {
+      &-xs-#{$i} {
+        $columns: 12;
+        $width: 481;
+        padding: 0 15px;
+        float: left;
+        box-sizing: border-box;
+        width: (($width/$columns)*$i)/$width*100%;
+      }
+    }
+  }
+}
