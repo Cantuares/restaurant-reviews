@@ -2,7 +2,7 @@
 
 The entire design structure has been converted to be compatible with mobile devices and with accessibility features.
 
-Installation
+# Installation
 
 Clone the repository and install all dependencies by running the code below.
 
