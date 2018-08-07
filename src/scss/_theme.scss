@@ -164,7 +164,7 @@ nav {
   margin: 0;
   padding: 30px 15px 60px;
   text-align: center;
-  //margin: 0 -15px 0 -15px;
+  margin: 0 -15px 0 -15px;
   li {
     box-sizing: border-box;
     float: left;
@@ -194,10 +194,10 @@ nav {
     display: block;
     margin: 0;
     max-width: 100%;
-    //min-height: 248px;
+    min-height: 248px;
     min-width: 100%;
   }
-  li h2 {
+  li h1 {
     color: #f18200;
     font-family: Arial,sans-serif;
     font-size: 14pt;
@@ -366,7 +366,7 @@ nav {
   background-color: #3397db;
   color: #fff;
   padding: 2px 5px;
-  z-index: 9999;
+  z-index: 100;
   &:focus {
     top: 0;
     color: white;
